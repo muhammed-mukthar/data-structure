@@ -1,10 +1,10 @@
 # notes
 
-####Algorithm
+# Algorithm
 
 algotithm is a set of well defined instructions to solve a particular problem
 
-#### characterstics of algorithm
+## characterstics of algorithm
 
 well defined
 
@@ -14,7 +14,7 @@ Language independent
 
 
 
-#### Algorithm analysis
+## Algorithm analysis
 
 
 Time complexity :- Amount taken by an algorithm to run
@@ -55,7 +55,7 @@ O(n3)-Cubic time complexitym 3 iteration
 O(logn)-Logarithmic complexity 1/2 iteration of total input
 
 
-# worst case space complexity
+## worst case space complexity
 
 
 O(n)-Linear space complexity , iterated variable n times
@@ -66,7 +66,7 @@ O(logn)-Logarithmic space complexity 1/2 iteration of total input
 
 
 
-# Object Big-O worst case
+## Object Big-O worst case
 
 key value pairs
 
@@ -85,7 +85,7 @@ Object.values()-O(n)
 Object.entries()-O(n)
 
 
-# Array -Big O
+## Array -Big O
 
 An array is an ordered collecion of values
 
@@ -103,3 +103,26 @@ Shift/unshift/concat/slice/splice -O(n)
 
 forEach/map/fiter/reduce - O(n)
 
+
+
+# Recursion
+
+- Recursion is a problem solving technique where the solution depends on solutions to smaller
+instances of the same problem
+
+- recursion is when a function calls itself
+
+
+
+- Every recursive solution needs to have a base case-a condition to terminate the recursion.
+
+- Recursion might simplify solving a problem but it does not always translate to a faster solution.
+
+
+- A recursive solution may be far worse compared to an iterative solution.
+
+### TIPS
+
+- Figure out how to break down the problem into smaller versions of the same problem
+
+- Identify the base case for recursion

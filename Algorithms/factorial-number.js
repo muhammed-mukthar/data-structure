@@ -15,6 +15,6 @@ for(let i=1;i<=n;i++){
 return sum
 }
 
-console.log(factorial(4));//24
+console.log(factorial(5));//24
 
 //big-O : O(n)
