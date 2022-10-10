@@ -54,3 +54,25 @@ O(n)-Linear space complexity , iterated variable n times
 O(1)-Constant space complexity, same variable used 1 time
 
 O(logn)-Logarithmic space complexity 1/2 iteration of total input
+
+
+
+#Object Big-O worst case
+
+insert-O(1)
+
+Remove-O(1)
+
+Access-O(1)
+
+Search-O(n)
+
+Object.keys()-O(n)
+
+Object.values()-O(n)
+
+Object.entries()-O(n)
+
+
+#Array -Big O
+
