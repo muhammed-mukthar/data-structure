@@ -59,6 +59,8 @@ O(logn)-Logarithmic space complexity 1/2 iteration of total input
 
 #Object Big-O worst case
 
+key value pairs
+
 insert-O(1)
 
 Remove-O(1)
@@ -75,4 +77,20 @@ Object.entries()-O(n)
 
 
 #Array -Big O
+
+An array is an ordered collecion of values
+
+insert/remove at end-O(1)
+
+insert/remove at Begining-O(n)
+
+Access-O(1)
+
+Search-O(n)
+
+push/pop-O(1)
+
+Shift/unshift/concat/slice/splice -O(n)
+
+forEach/map/fiter/reduce - O(n)
 
