@@ -1,10 +1,10 @@
-#notes
+# notes
 
-##Algorithm
+####Algorithm
 
 algotithm is a set of well defined instructions to solve a particular problem
 
-##characterstics of algorithm
+#### characterstics of algorithm
 
 well defined
 
@@ -14,7 +14,7 @@ Language independent
 
 
 
-#Algorithm analysis
+#### Algorithm analysis
 
 
 Time complexity :- Amount taken by an algorithm to run
@@ -23,7 +23,7 @@ Space complexity :- Amount of memory taken by an algorithm to run
 
 
 
-##Asympotic notation 
+## Asympotic notation 
 
 Big-o -worst case
 Omega Notaion -best case
@@ -31,7 +31,7 @@ Theta Notation -average case
 
 
 
-#Big-O Notation
+# Big-O Notation
 
 Calculation not dependent on input size-O(1)
 
@@ -55,7 +55,7 @@ O(n3)-Cubic time complexitym 3 iteration
 O(logn)-Logarithmic complexity 1/2 iteration of total input
 
 
-#worst case space complexity
+# worst case space complexity
 
 
 O(n)-Linear space complexity , iterated variable n times
@@ -66,7 +66,7 @@ O(logn)-Logarithmic space complexity 1/2 iteration of total input
 
 
 
-#Object Big-O worst case
+# Object Big-O worst case
 
 key value pairs
 
@@ -85,7 +85,7 @@ Object.values()-O(n)
 Object.entries()-O(n)
 
 
-#Array -Big O
+# Array -Big O
 
 An array is an ordered collecion of values
 
