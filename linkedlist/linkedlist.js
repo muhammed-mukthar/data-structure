@@ -17,6 +17,17 @@ class LinkedList{
     getSize(){
         return this.size
     }
+    prepend(value){
+        const node=new Node(value)
+        if(this.isEmpty()){
+            this.head=node
+
+this.size++
+       }else{
+        node.next = this.head
+        this.head=node
+       }
+    }
 }
 
 
@@ -24,3 +35,6 @@ const list =new LinkedList()
 
 console.log('list is emoty',list.isEmpty());
 console.log('list is not emoty',list.getSize());
+console.log(list.prepend(10));
+console.log(list.prepend(20));
+console.log(list.prepend(30));
