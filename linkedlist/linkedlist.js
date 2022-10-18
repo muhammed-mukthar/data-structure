@@ -21,12 +21,25 @@ class LinkedList{
         const node=new Node(value)
         if(this.isEmpty()){
             this.head=node
-
-this.size++
+            this.size++
        }else{
         node.next = this.head
         this.head=node
        }
+    }
+    print(){
+        if(this.isEmpty()){
+            console.log('list is empty');
+        }else{
+            let current=this.head
+            let listvalues=''
+            while(current){
+                listvalues += `${current.value}`
+                current=current.next
+            }
+            console.log(listvalues);
+        }
+    
     }
 }
 
@@ -35,6 +48,10 @@ const list =new LinkedList()
 
 console.log('list is emoty',list.isEmpty());
 console.log('list is not emoty',list.getSize());
-console.log(list.prepend(10));
-console.log(list.prepend(20));
-console.log(list.prepend(30));
+list.print()
+list.prepend(10)
+list.print();
+list.prepend(20);
+list.print();
+list.prepend(30);
+list.print();
