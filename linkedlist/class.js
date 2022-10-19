@@ -42,6 +42,23 @@ class LinkedList {
     }
   }
 
+  search(value){
+    if(this.isEmpty()){
+        return console.log('linked list is empty');
+    }
+    let index=0
+    let current=this.head
+    while(current){
+        if(current.value == value){
+            return index
+        }
+        current=current.next
+        index++ 
+    }
+    return -1
+ 
+  }
+
   //O(n)
   append(value) {
     const node = new Node(value);
@@ -141,5 +158,6 @@ list.insert(40, 1);
 list.print();
 console.log(list.getSize());
 console.log(list.removeValue(40));
+console.log(list.search(130)); 
 list.print()
 /* ----------------------------- time compexite ----------------------------- */
