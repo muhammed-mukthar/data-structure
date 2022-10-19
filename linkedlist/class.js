@@ -60,6 +60,23 @@ class LinkedList{
         }
         this.size++
     }
+    insert(value,index){
+        if(index < 0|| index > this.size){
+            return console.log('fd');
+        }if(index == 0){
+            this.prependvalue(value)
+        }
+        if(index > 0 ){
+            const node =new Node(value)
+            let prev=this.head
+            for(let i=0;i<index-1;i++){
+                prev=prev.next
+            }
+            node.next =prev.next
+            prev.next=node
+            this.size++
+        }
+    }
 
 
 
@@ -71,11 +88,13 @@ const list=new LinkedList()
 console.log(list.isEmpty());
 
 console.log(list.getSize());
-list.append(10)
-list.append(10)
-list.append(10)
+
 list.print()
 
-
-
+list.insert(10,0)
+list.print()
+list.insert(30,0)
+list.print()
+list.insert(30,1)
+list.print()
 /* ----------------------------- time compexite ----------------------------- */
