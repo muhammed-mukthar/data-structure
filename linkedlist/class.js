@@ -119,6 +119,18 @@ class LinkedList {
     }
   }
 
+reverse(){
+    let prev=null
+    let curr=this.head
+    while(curr){
+        let next=curr.next
+        curr.next=prev
+        prev=curr
+        curr=next
+    }
+    this.head=prev
+}
+
   removeFrom(index) {
     if (index < 0 || index >= this.size) {
       return console.log("invalid caze");
@@ -157,7 +169,7 @@ list.print();
 list.insert(40, 1);
 list.print();
 console.log(list.getSize());
-console.log(list.removeValue(40));
-console.log(list.search(130)); 
+list.reverse() 
+
 list.print()
 /* ----------------------------- time compexite ----------------------------- */
