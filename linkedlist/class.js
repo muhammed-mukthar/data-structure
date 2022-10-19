@@ -56,6 +56,7 @@ class LinkedList {
     }
     this.size++;
   }
+  //O(n)
   insert(value, index) {
     if (index < 0 || index > this.size) {
       return console.log("fd");
@@ -72,6 +73,32 @@ class LinkedList {
       node.next = prev.next;
       prev.next = node;
       this.size++;
+    }
+  }
+
+  //O(n)
+  removeValue(value){
+    if(this.isEmpty()){
+        return console.log('empty');
+    }else{
+        if(this.head.value === value){
+            this.head=this.head.next
+            this.size--
+            return value
+        }else{
+            let prev=this.head
+            while(prev.next && prev.next.value != value){
+                prev=prev.next
+            }
+            if(prev.next){
+            const    removeNode=prev.next
+                prev.next=removeNode.next
+                this.size--
+                return value
+            }
+            return null
+        }
+
     }
   }
 
@@ -113,12 +140,6 @@ list.print();
 list.insert(40, 1);
 list.print();
 console.log(list.getSize());
-console.log(list.removeFrom(10));
-console.log(list.getSize());
-console.log(list.removeFrom(0));
-console.log(list.getSize());
+console.log(list.removeValue(40));
 list.print()
-console.log(list.removeFrom(1));
-list.print()
-console.log(list.getSize());
 /* ----------------------------- time compexite ----------------------------- */
