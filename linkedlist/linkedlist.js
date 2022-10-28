@@ -1,57 +1,92 @@
-class Node{
-    constructor(value){
-        this.value=value
-        this.next=null
-    }
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 
-class LinkedList{
-    constructor(){
-        this.head=null
-        this.size=0
+class linkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  isEmpty() {
+    if (this.head == null) {
+      return true;
+    } else {
+      return false;
     }
-    isEmpty(){
-        return this.size ===0
+  }
+
+  prepend(value) {
+    let node = new Node(value);
+    if (this.isEmpty()) {
+      this.head = value;
+      this.size++;
+    } else {
+      node.next = this.head;
+      this.head = node;
+      this.size++;
+    }
+  }
+
+  print() {
+    if (this.isEmpty()) {
+      return console.log("empty");
+    }
+    let curr = this.head;
+    let listvalue = "";
+    while (curr.next != null) {
+      listvalue += ` ${curr.value}`;
+      curr = curr.next;
+    }
+    return console.log(listvalue);
+  }
+
+  insert(value, index) {
+    if (index < 0 && index > this.size) {
+      return console.log("not possible");
     }
 
-    getSize(){
-        return this.size
+    if (index == 0) {
+      this.prepend(value);
     }
-    prepend(value){
-        const node=new Node(value)
-        if(this.isEmpty()){
-            this.head=node
-            this.size++
-       }else{
-        node.next = this.head
-        this.head=node
-       }
+    if (index > 0) {
+      let node = new Node(value);
+      let prev = this.head;
+      for (let i = 0; i < index - 1; i++) {
+        prev = prev.next;
+      }
+      node.next = prev.next;
+      prev.next = node;
+      this.size++;
     }
-    print(){
-        if(this.isEmpty()){
-            console.log('list is empty');
-        }else{
-            let current=this.head
-            let listvalues=''
-            while(current){
-                listvalues += `${current.value}`
-                current=current.next
-            }
-            console.log(listvalues);
-        }
-    
+  }
+  removeIndex(index){
+    if(this.isEmpty){
+        return null
     }
+    let prev=this.head
+    let removedNode
+    for(let i=1;i<index-1;i++){
+        prev=prev.next
+    }
+    removedNode=prev.next
+    prev.next=removedNode.next
+
+    this.size--
+    return removedNode.value
+  }
+  
 }
 
+let list = new linkedList();
 
-const list =new LinkedList()
-
-console.log('list is emoty',list.isEmpty());
-console.log('list is not emoty',list.getSize());
-list.print()
-list.prepend(10)
+list.insert(10, 0);
+list.insert(30, 0);
+list.prepend(40);
 list.print();
-list.prepend(20);
+list.removeIndex(1)
 list.print();
-list.prepend(30);
-list.print();
+console.log(list.isEmpty());
