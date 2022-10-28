@@ -1,3 +1,5 @@
+# stack
+
 # use cases
 
 browser history tracking 
