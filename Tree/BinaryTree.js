@@ -44,6 +44,20 @@ class binarysearchTree{
             }
         }
     }
+
+    search(root,value){
+        if(root ===null){
+            return false
+        }else{
+            if(root.value ===value){
+                return true
+            }else if(value < root.value){
+              return  this.search(root.left,value)
+            }else{
+                return this.search(root.right,value)
+            }
+        }
+    }
 }
 
 const bst=new binarysearchTree()
@@ -53,3 +67,6 @@ console.log('is emplty',bst.isEmpty());
 bst.insert(10)
 bst.insert(15)
 bst.insert(2)
+console.log(bst.search(bst.root,10));
+console.log(bst.search(bst.root,15));
+console.log(bst.search(bst.root,24));
