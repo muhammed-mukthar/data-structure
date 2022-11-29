@@ -16,7 +16,6 @@ class binarysearchTree{
     constructor(){
         this.root=null
     }
-
     isEmpty(){
         return this.root===null
     }
@@ -27,8 +26,8 @@ class binarysearchTree{
         }else{
               this.insertNode(this.root,newNode)
         }
-
     }
+    
     insertNode(root,newNode){
         if(newNode.value <root.value){
             if(root.left ===null ){
