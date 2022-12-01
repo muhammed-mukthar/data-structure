@@ -18,7 +18,6 @@ function InsertionSort(arr){
         arr[j+1]=numbertoinsert
     }
 
-
 }
 
 const arr=[8,20,-2,-4,-6]
