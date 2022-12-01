@@ -25,7 +25,7 @@ return -1
 }
 
 let ar=[-5,1,2,33,55,66]
-
+  
 console.log(BinarySearch(ar,33));
 
 
