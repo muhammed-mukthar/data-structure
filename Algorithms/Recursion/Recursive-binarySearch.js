@@ -12,7 +12,7 @@ function RecursiveBinary(arr,target){
 }
 
 function rsearch(arr,target,first,last){
-    if(first > last){
+    if(first > last){ 
         return -1
     }
 

@@ -5,7 +5,7 @@
 // BUBBLESORT(ARR)=>SHOULD RETURN [-6,-3,21,44]
 
 function BubbleSort(a){
-    let temp=0
+   
     let swapped
     do{
          swapped=false
